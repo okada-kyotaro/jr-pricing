@@ -1,3 +1,5 @@
+[こちらの記事](https://github.com/masuda220/jr-pricing)の写しです。
+
 # 実行方法など
 
 - bootRunで実行、 localhost:8080 で Swagger-ui 画面に遷移
