@@ -1,4 +1,4 @@
-package api
+package it
 
 import spock.lang.Specification
 import spock.lang.Unroll
@@ -6,7 +6,7 @@ import spock.lang.Unroll
 @Unroll
 class IntegrationTest extends Specification {
 
-    def "ケース: #station / #train / #seat / 大人片道1枚"() {
+    def "東京 から #station まで #train #seat 大人片道1枚"() {
         when:
         def actualFare = getFareExample(station, train, seat)
 
@@ -25,6 +25,7 @@ class IntegrationTest extends Specification {
         "姫路"    | "のぞみ" | "自由席" || 15930
     }
 
+    //仮テスト実行用
     private static int getFareExample(String station, String train, String seat) {
         int fare = 0
         switch (station) {
