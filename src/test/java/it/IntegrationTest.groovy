@@ -6,6 +6,11 @@ import spock.lang.Unroll
 @Unroll
 class IntegrationTest extends Specification {
 
+    def "東京 から 新大阪 まで ひかり 指定席 大人片道1枚"() {
+        expect://東京から新大阪ひかり指定席大人片道1枚の運賃+特急料金の値段を出力するテスト
+        getFareExample("新大阪", "ひかり", "指定席") == 14400
+    }
+
     def "東京 から #station まで #train #seat 大人片道1枚"() {
         when:
         def actualFare = getFareExample(station, train, seat)
